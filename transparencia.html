@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Transparência - ONG Adoção de Animais</title>
+    <meta
+      name="description"
+      content="Acompanhe a prestação de contas da ONG Adoção de Animais: distribuição de recursos, evolução de voluntários e impacto social em nossos projetos."
+    />
+    <meta name="author" content="Ricardo Oscar Borges" />
+    <meta
+      name="keywords"
+      content="ONG, adoção de animais, transparência, prestação de contas, voluntariado, projetos sociais, impacto social"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Biblioteca Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial da ONG">
+          <img src="img/logo.png" alt="Logo da ONG" width="150" />
+        </a>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li><a href="doacoes.html">Doações</a></li>
+          <li><a href="transparencia.html" class="active">Transparência</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-transparencia">
+      <picture>
+        <source srcset="img/transparencia_relatorio.webp" type="image/webp" />
+        <img
+          src="img/transparencia_relatorio.jpg"
+          alt="Relatórios de Transparência"
+        />
+      </picture>
+      <div class="hero-text">
+        <h1>Prestação de Contas e Impacto</h1>
+        <p>
+          Acompanhe como os recursos são aplicados em nossos projetos e ações.
+        </p>
+      </div>
+    </section>
+
+    <!-- Relatórios e Gráficos -->
+    <main>
+      <section class="relatorios">
+        <h2>Distribuição de Recursos por Projeto</h2>
+        <canvas
+          id="graficoPizza"
+          width="400"
+          height="400"
+          role="img"
+          aria-label="Gráfico de pizza mostrando a distribuição de recursos por projeto"
+        ></canvas>
+
+        <h2>Evolução de Voluntários</h2>
+        <canvas
+          id="graficoLinha"
+          width="400"
+          height="400"
+          role="img"
+          aria-label="Gráfico de linha mostrando evolução de voluntários"
+        ></canvas>
+
+        <h2>Impacto Social por Região</h2>
+        <canvas
+          id="graficoBarras"
+          width="400"
+          height="400"
+          role="img"
+          aria-label="Gráfico de barras mostrando impacto social por região"
+        ></canvas>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 ONG Adoção de Animais. Todos os direitos reservados.</p>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <h3>Assine nossa Newsletter</h3>
+        <form action="#" method="post">
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <button type="submit" class="btn">Assinar</button>
+        </form>
+      </section>
+
+      <nav aria-label="Links do rodapé">
+        <a href="contato.html">Contato</a> | <a href="doacoes.html">Doações</a>
+      </nav>
+    </footer>
+
+    <!-- Gráficos via Chart.js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Gráfico de Pizza
+        const ctxPizza = document
+          .getElementById("graficoPizza")
+          .getContext("2d");
+        new Chart(ctxPizza, {
+          type: "pie",
+          data: {
+            labels: ["Projeto A", "Projeto B", "Projeto C"],
+            datasets: [
+              {
+                data: [30, 50, 20],
+                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+              },
+            ],
+          },
+        });
+
+        // Gráfico de Linha
+        const ctxLinha = document
+          .getElementById("graficoLinha")
+          .getContext("2d");
+        new Chart(ctxLinha, {
+          type: "line",
+          data: {
+            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+            datasets: [
+              {
+                label: "Voluntários",
+                data: [8, 12, 18, 22, 28, 35],
+                borderColor: "#36A2EB",
+                fill: false,
+              },
+            ],
+          },
+        });
+
+        // Gráfico de Barras
+        const ctxBarras = document
+          .getElementById("graficoBarras")
+          .getContext("2d");
+        new Chart(ctxBarras, {
+          type: "bar",
+          data: {
+            labels: [
+              "Região Norte",
+              "Região Sul",
+              "Sudeste",
+              "Centro-Oeste",
+              "Nordeste",
+            ],
+            datasets: [
+              {
+                label: "Impacto Social",
+                data: [60, 80, 90, 70, 85],
+                backgroundColor: "#FF6384",
+              },
+            ],
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

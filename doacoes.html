@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>Doações - ONG Adoção de Animais</title>
+    <meta
+      name="description"
+      content="Página de doações da ONG Adoção de Animais. Contribua e ajude a transformar vidas de animais através de nossos projetos sociais."
+    />
+    <meta name="author" content="Ricardo Oscar Borges" />
+    <meta
+      name="keywords"
+      content="ONG, adoção, animais, doações, contribua, projetos, ajuda"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial da ONG">
+          <img src="img/logo.png" alt="Logo da ONG" width="150" />
+        </a>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li><a href="doacoes.html" class="active">Doações</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= HERO DOAÇÕES ================= -->
+    <section class="hero-doacoes">
+      <picture>
+        <source srcset="img/doacoes_ajuda.webp" type="image/webp" />
+        <img
+          src="img/doacoes_ajuda.jpg"
+          alt="Doe e ajude os animais"
+          loading="lazy"
+        />
+      </picture>
+      <div class="hero-text">
+        <h1>Doe e transforme vidas</h1>
+        <p>
+          Com sua doação, podemos cuidar melhor dos animais e manter nossos
+          projetos.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= IMAGENS DE DOAÇÕES ================= -->
+    <div class="doacoes-imagens">
+      <picture>
+        <source srcset="img/doacoes_fundos.webp" type="image/webp" />
+        <img
+          src="img/doacoes_fundos.jpg"
+          alt="Fundos arrecadados"
+          loading="lazy"
+        />
+      </picture>
+      <picture>
+        <source srcset="img/doacoes_racao.webp" type="image/webp" />
+        <img src="img/doacoes_racao.jpg" alt="Doação de ração" loading="lazy" />
+      </picture>
+    </div>
+
+    <!-- ================= RELATÓRIOS E GRÁFICOS ================= -->
+    <section class="relatorios">
+      <h2>Relatórios e Indicadores</h2>
+      <p>
+        Confira como os recursos são distribuídos entre nossos projetos e ações.
+      </p>
+
+      <!-- Gráfico de Pizza -->
+      <div class="grafico">
+        <h3>Distribuição de Recursos por Projeto</h3>
+        <canvas id="graficoPizza" width="400" height="400"></canvas>
+      </div>
+
+      <!-- Gráfico de Linha -->
+      <div class="grafico">
+        <h3>Evolução de Voluntários</h3>
+        <canvas id="graficoLinha" width="400" height="400"></canvas>
+      </div>
+
+      <!-- Gráfico de Barras -->
+      <div class="grafico">
+        <h3>Impacto Social por Região</h3>
+        <canvas id="graficoBarras" width="400" height="400"></canvas>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 ONG Adoção de Animais. Todos os direitos reservados.</p>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <h2>Assine nossa Newsletter</h2>
+        <form action="#" method="post">
+          <label for="newsletter-email">E-mail:</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <fieldset>
+            <legend>Preferências de conteúdo:</legend>
+            <label
+              ><input type="checkbox" name="pref[]" value="noticias" />
+              Notícias</label
+            >
+            <label
+              ><input type="checkbox" name="pref[]" value="eventos" />
+              Eventos</label
+            >
+            <label
+              ><input type="checkbox" name="pref[]" value="campanhas" />
+              Campanhas</label
+            >
+          </fieldset>
+          <button type="submit">Inscrever</button>
+        </form>
+      </section>
+
+      <div class="social">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Twitter</a>
+      </div>
+    </footer>
+
+    <!-- ================= SCRIPTS DE GRÁFICOS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Gráfico de Pizza
+      const ctxPizza = document.getElementById("graficoPizza").getContext("2d");
+      const graficoPizza = new Chart(ctxPizza, {
+        type: "pie",
+        data: {
+          labels: ["Castração", "Resgate", "Feira de Adoção"],
+          datasets: [
+            {
+              data: [40, 35, 25],
+              backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+            },
+          ],
+        },
+      });
+
+      // Gráfico de Linha
+      const ctxLinha = document.getElementById("graficoLinha").getContext("2d");
+      const graficoLinha = new Chart(ctxLinha, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+          datasets: [
+            {
+              label: "Voluntários",
+              data: [5, 10, 15, 20, 25, 30],
+              borderColor: "#36A2EB",
+              fill: false,
+            },
+          ],
+        },
+      });
+
+      // Gráfico de Barras
+      const ctxBarras = document
+        .getElementById("graficoBarras")
+        .getContext("2d");
+      const graficoBarras = new Chart(ctxBarras, {
+        type: "bar",
+        data: {
+          labels: [
+            "Região Norte",
+            "Região Sul",
+            "Região Sudeste",
+            "Região Centro-Oeste",
+            "Região Nordeste",
+          ],
+          datasets: [
+            {
+              label: "Impacto Social",
+              data: [50, 75, 100, 60, 80],
+              backgroundColor: "#FF6384",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

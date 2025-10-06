@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>Blog - ONG Adoção de Animais</title>
+    <meta
+      name="description"
+      content="Blog da ONG Adoção de Animais com notícias, dicas de cuidados e histórias de adoção de pets."
+    />
+    <meta name="author" content="Ricardo Oscar Borges" />
+    <meta
+      name="keywords"
+      content="ONG, adoção, animais, pets, blog, cuidados, histórias, campanhas"
+    />
+
+    <!-- Favicon opcional -->
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="Página inicial da ONG">
+          <img src="img/logo.png" alt="Logo da ONG" width="150" />
+        </a>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li><a href="doacoes.html">Doações</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ================= BLOG POSTS ================= -->
+    <main>
+      <h1>Notícias e Dicas</h1>
+
+      <!-- Post 1 -->
+      <article class="post">
+        <picture>
+          <source srcset="img/blog_cuidados.webp" type="image/webp" />
+          <img
+            src="img/blog_cuidados.jpg"
+            alt="Cuidados com animais"
+            loading="lazy"
+          />
+        </picture>
+        <div class="post-content">
+          <h2>Cuidados com Animais</h2>
+          <p>Confira dicas importantes para manter seu pet saudável e feliz!</p>
+          <div class="comentarios">
+            <p><strong>Ana:</strong> Ótimas dicas, vou seguir!</p>
+            <p><strong>João:</strong> Muito útil para novos donos de pets.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post">
+        <picture>
+          <source srcset="img/blog_castracao.webp" type="image/webp" />
+          <img
+            src="img/blog_castracao.jpg"
+            alt="Campanha de castração"
+            loading="lazy"
+          />
+        </picture>
+        <div class="post-content">
+          <h2>Campanha de Castração</h2>
+          <p>
+            Participe da nossa campanha para controlar a população de animais de
+            rua de forma responsável.
+          </p>
+          <div class="comentarios">
+            <p>
+              <strong>Marcos:</strong> Levei meu cachorro, super organizado!
+            </p>
+            <p><strong>Carla:</strong> Excelente iniciativa da ONG!</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post">
+        <picture>
+          <source srcset="img/blog_historia.webp" type="image/webp" />
+          <img
+            src="img/blog_historia.jpg"
+            alt="História de adoção"
+            loading="lazy"
+          />
+        </picture>
+        <div class="post-content">
+          <h2>Histórias de Adoção</h2>
+          <p>
+            Veja emocionantes histórias de animais que encontraram um lar cheio
+            de amor.
+          </p>
+          <div class="comentarios">
+            <p><strong>Luiza:</strong> Que lindas histórias, me emocionei!</p>
+            <p><strong>Pedro:</strong> Inspirei-me a adotar também.</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 ONG Adoção de Animais. Todos os direitos reservados.</p>
+      <nav aria-label="Links de rodapé">
+        <a href="contato.html">Contato</a> |
+        <a href="transparencia.html">Transparência</a>
+      </nav>
+
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <h2>Assine nossa Newsletter</h2>
+        <form action="#" method="post">
+          <label for="newsletter-email">E-mail:</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <fieldset>
+            <legend>Preferências de conteúdo:</legend>
+            <label
+              ><input type="checkbox" name="pref[]" value="noticias" />
+              Notícias</label
+            >
+            <label
+              ><input type="checkbox" name="pref[]" value="eventos" />
+              Eventos</label
+            >
+            <label
+              ><input type="checkbox" name="pref[]" value="campanhas" />
+              Campanhas</label
+            >
+          </fieldset>
+          <button type="submit">Inscrever</button>
+        </form>
+      </section>
+    </footer>
+  </body>
+</html>
