@@ -27,7 +27,7 @@ A proposta é oferecer uma plataforma informativa e envolvente que incentive a a
 ## Visualizar Página
 
 Acesse o site completo através do link:  
-https://rickpg231.github.io/Atividade1_Ong_Doacao_Animais/
+https://rickpg231.github.io/Atividade1_Ong_Adocao_Animais/
 
 ## Autor
 
