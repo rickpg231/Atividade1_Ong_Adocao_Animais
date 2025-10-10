@@ -25,7 +25,7 @@ media/ – Pasta reservada para conteúdos de mídia adicionais (vídeos, áudio
 
 ## Descrição do Projeto
 
-O site foi desenvolvido utilizando HTML5, CSS3 e JavaScript, com foco em acessibilidade, semântica e responsividade.  
+O site foi desenvolvido utilizando HTML5, com foco em acessibilidade, semântica e responsividade.  
 Todas as páginas foram validadas no W3C Validator sem erros ou avisos.  
 A proposta é oferecer uma plataforma informativa e envolvente que incentive a adoção responsável e a participação social.
 
