@@ -3,6 +3,11 @@
 Este projeto foi desenvolvido como parte da atividade de Front-End, com o objetivo de criar o site institucional de uma ONG voltada à adoção e doação de animais.  
 O site apresenta informações sobre a organização, seus projetos, campanhas, voluntariado e formas de contato e contribuição.
 
+## Acesse o site
+
+Acesse o site completo através do link:  
+https://rickpg231.github.io/Atividade1_Ong_Adocao_Animais/
+
 ## Arquivos do Projeto
 
 index.html – Página inicial da ONG, com apresentação da instituição e links principais.  
@@ -23,11 +28,6 @@ media/ – Pasta reservada para conteúdos de mídia adicionais (vídeos, áudio
 O site foi desenvolvido utilizando HTML5, CSS3 e JavaScript, com foco em acessibilidade, semântica e responsividade.  
 Todas as páginas foram validadas no W3C Validator sem erros ou avisos.  
 A proposta é oferecer uma plataforma informativa e envolvente que incentive a adoção responsável e a participação social.
-
-## Visualizar Página
-
-Acesse o site completo através do link:  
-https://rickpg231.github.io/Atividade1_Ong_Adocao_Animais/
 
 ## Autor
 
