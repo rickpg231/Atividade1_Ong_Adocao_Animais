@@ -11,7 +11,7 @@ O projeto prioriza **acessibilidade, otimização de imagens e performance**, in
 ## Acesse o site
 
 Versão publicada no GitHub Pages:  
-https://rickpg231.github.io/Atividade1_Ong_Doacao_Animais/
+https://rickpg231.github.io/Atividade1_Ong_Adocao_Animais/
 
 ---
 
